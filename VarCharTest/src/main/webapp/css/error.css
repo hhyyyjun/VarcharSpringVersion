@@ -1,0 +1,45 @@
+@charset "UTF-8";
+/* 요청하신 페이지를 찾을 수 없습니다..., 404error.. */
+.mainErrorMsgBox{
+	text-align: center;
+	padding-top : 3%;
+	color : white;
+	
+}
+
+.mainErrorMsg {
+	font-weight : 800;
+}
+/* 중앙 메인화면으로 이동하기 버튼 div */
+#errorMain{
+	position : relative;
+	text-align: center;
+	width:100%;
+	height: 100%
+}
+/* 메인 화면으로 이동하기 버튼 */
+#errorMainGo{
+	background-color: darkgray;
+    border: 3px solid darkgray;
+}
+#errorMainGo:hover{
+	background-color: #77af9c;
+    color: #d7fff1;
+}
+/* 헤더 상표 */
+#errorPageBrand{
+	position:relative;
+	color: #ffff;
+	font-size:20px;
+	font-weight: 800;
+	margin-left:10%;	
+}
+#errorPageBrand	span{
+	color: #01d28e;
+}
+/* 헤더 상표 감싸는 div */
+#errorPageHeaderBox{
+	width:100%;
+	background:black;
+	padding: 1rem 1rem;
+}

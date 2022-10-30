@@ -1,0 +1,275 @@
+/* ----- 김종현, 김수연 수정(7.30) */
+
+body,
+nav,
+#wrap {
+  min-width: 520px;
+}
+
+#wrap h2,
+#wrap p,
+#wrap input,
+#wrap span,
+#wrap li,
+#wrap a,
+#wrap address {
+  font-family: "Noto Sans KR", sans-serif !important;
+}
+
+#wrap {
+  max-width: 520px;
+  height: auto;
+  margin: 50px auto;
+  box-shadow: 0 6px 17px 0 rgb(0 0 0 / 10%);
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+}
+/* --------------제목--------------- */
+
+#searchInner {
+  padding: 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.searchInfo {
+  width: 50%;
+  padding: 20px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 700;
+  list-style: none;
+  border: 3px solid #01d28e;
+  border-top-left-radius: 15px;
+  border-top-right-radius: 15px;
+  border-bottom: #ffffff;
+  cursor: pointer;
+}
+.searchInfo:hover span {
+  opacity: 0.5;
+  transition: 0.2s;
+}
+
+.searchInfo:last-child {
+  border: 2px solid #ffffff;
+}
+
+
+/* input태그 --> 이름, 휴대폰 번호 입력 */
+
+#Container {
+  padding: 30px 50px;
+  height: auto;
+}
+
+input {
+  height: 45px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #dee5ec;
+  outline: none;
+  margin: 5px 0 25px 0;
+}
+input[name="mname"],
+input[name="mid"] {
+  width: 100%;
+  margin: 5px 0 25px 0;
+}
+input[name="memail"] {
+  width: 67%;
+}
+
+/* 비밀번호 찾기 */
+#passwordBox {
+  display: none;
+}
+
+/* 이름, 휴대폰 번호 글자 */
+#nameTitle,
+#emailTitleForId,
+#emailTitleForPw,
+#idTitle {
+  margin: 0;
+  font-size: 13px;
+  font-weight: 700;
+  color: #dee5ec;
+}
+/* 인증번호 버튼, 확인 버튼 */
+#certificateInnerForId,
+#certificateInnerForPw {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+#certificateBtnForId,
+#certificateBtnForPw {
+  width: 30%;
+  height: 50px;
+  font-size: 16px;
+  background-color: #dee5ec;
+  cursor: no-drop;
+  outline: none;
+}
+
+#idSearchBtn,
+#passwordSearchBtn {
+  width: 100%;
+  height: 65px;
+  font-size: 20px;
+  padding: 10px;
+  margin: 15px 0;
+  background-color: #01d28e;
+  cursor: pointer;
+}
+
+#idSearchBtn,
+#passwordSearchBtn,
+#certificateBtnForId,
+#certificateBtnForPw {
+  color: #ffffff;
+  font-weight: 900;
+  border: none;
+  border-radius: 10px;
+  outline: none;
+}
+
+/* 유효성 검사 msg */
+#onlyName,
+#onlyId,
+#missing1,
+#missing2,
+#blank,
+#short {
+  display: none;
+  font-size: 16px;
+  font-weight: 700;
+  color: #eb5a46;
+  text-align: center;
+  margin: 20px 0 30px;
+}
+
+/* 아이디/비밀번호 찾기, 비회원예약조회 */
+#phoneMsg,
+#emailMsg {
+  text-align: center;
+  padding: 10px 25px;
+}
+
+#phoneMsg > p,
+#emailMsg > p {
+  color: #222;
+  font-size: 13px;
+  font-weight: normal;
+}
+
+/* 간편 로그인, 회원가입 */
+
+.subLogin {
+  width: 100%;
+  font-size: 16px;
+  text-align: center;
+  font-weight: normal;
+  padding: 0 25px;
+  margin: 30px 0;
+  position: relative;
+}
+
+.subLogin::before {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #ddd;
+  content: "";
+  z-index: -1;
+}
+.subLogin > span {
+  padding: 0 20px;
+  background-color: #fff;
+}
+/* 간편로그인 */
+#otherLogin {
+  width: 100%;
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+#otherLogin > li {
+  width: 60px;
+  height: 60px;
+  margin: 0 15px;
+  list-style: none;
+}
+
+#otherLogin > li:first-child {
+  background: url("../images/간편로그인.jpg") no-repeat 0 -60px;
+  background-size: 60px auto;
+}
+#otherLogin > li:nth-child(2) {
+  background: url("../images/간편로그인.jpg") no-repeat 0 0;
+  background-size: 60px auto;
+}
+
+
+#otherLogin > li > a {
+  height: 100%;
+  display: block;
+}
+
+#otherLogin #naver_id_login > a {
+	display: block;
+	width: 100%;
+	height: 100%
+}
+#otherLogin #naver_id_login > a > img {
+	display: none;
+}
+
+/* 회원가입 */
+
+#registerInner {
+  width: 100%;
+}
+
+#registerButton {
+  height: 65px;
+  margin: 20px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #dee5ec;
+  border-radius: 10px;
+  background-color: #1089ff;
+  text-decoration: none;
+  outline: none;
+}
+
+#registerButton > span {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* 회원가입을 통한 추가혜택 */
+#moreService {
+  text-align: center;
+}
+
+#moreService > p {
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 25px;
+}
+
+/* copyright */
+#footer {
+  padding: 25px 0;
+  text-align: center;
+}
+
+#footer > address {
+  font-size: 12px;
+  font-style: normal;
+  color: #555;
+}

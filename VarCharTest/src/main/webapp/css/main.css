@@ -1,0 +1,79 @@
+h3,h3,p,span,a {
+	font-weight: bold !important;
+}
+
+
+.mainService {
+  padding: 5rem 4rem;
+}
+
+.mainServiceMsg {
+  display: flex;
+  justify-content: flex-end;
+  margin: 40px 0 0 0;
+}
+
+.mainFilterTitle {
+  margin-bottom: 20px;
+}
+
+.mainFilterBox {
+  width: 100%;
+}
+
+.form-group > .label {
+  font-size: 12px !important;
+  font-weight: bold !important;
+}
+.form-control {
+  font-weight: bold;
+}
+
+.form-control > option {
+  color: #000;
+  font-size: 12px;
+  font-weight: 540;
+}
+
+.mainFilterBtn {
+  font-weight: bold;
+  margin-top: 10px;
+  transition: 0.1s;
+}
+
+.mainFilterBtn:hover {
+  opacity: 0.6;
+  background-color: lightgreen;
+}
+
+.mainFuelFilter,
+.mainRegionFilter {
+  margin-bottom: 30px;
+}
+
+.beMember {
+	display: flex;
+	justify-content: flex-end;
+}
+.beMember > a{
+	transition: 0.1s;
+}
+
+.beMember > a:hover {
+	opacity: 0.8;
+}
+
+.beMember > a:last-child {
+	margin-left: 20px;
+}
+
+@media (max-width: 767.99px) {
+	.startWithVarchar {
+		text-align: center;	
+	}	
+	
+  .mainServiceMsg {
+    display: flex;
+    justify-content: center;
+  }
+}

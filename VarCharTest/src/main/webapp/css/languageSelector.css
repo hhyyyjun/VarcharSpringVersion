@@ -1,0 +1,107 @@
+@charset "UTF-8";
+.languageSelector {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: url("../images/earth.png") no-repeat center;
+  background-size: contain;
+  cursor: pointer;
+}
+.languageSelector:hover {
+  opacity: 0.6;
+}
+
+.languageSelectorMsg {
+   margin-left: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #1089ff;
+  animation: light 0.3s infinite alternate;
+  background-color: #fff;
+  border: none;
+  border-radius: 4px; 
+   position: absolute;
+    top: 65px;
+    left: 15%;
+}
+ @media (max-width: 991.98px) {
+  .languageSelectorMsg {
+    position: absolute;
+    top: 65px;
+    left: 45%;
+  }
+} 
+
+@keyframes light {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0.7;
+  }
+}
+
+.grayBox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(76, 76, 90, 0.9);
+  z-index: 99;
+  display: none;
+}
+
+.languageBox {
+  display: none;
+  width: 600px;
+  height: 600px;
+  position: fixed;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  justify-content: center;
+  gap: 70px;
+  flex-wrap: wrap;
+  z-index: 100;
+}
+
+.language {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.language:hover {
+  opacity: 0.7;
+}
+
+@media (max-width: 640px) {
+  .languageBox {
+    max-width: 300px;
+    height: 350px;
+    gap: 30px;
+    align-items: center;
+  }
+  .language {
+    width: 130px;
+    height: 130px;
+  }
+}
+
+.languageBox > .language:first-child {
+  background: url("../images/korea.png") no-repeat center;
+  background-size: cover;
+}
+
+.languageBox > .language:nth-child(2) {
+  background: url("../images/japan.gif") no-repeat center;
+  background-size: cover;
+}
+.languageBox > .language:nth-child(3) {
+  background: url("../images/US.png") no-repeat 40% center;
+}
+.languageBox > .language:last-child {
+  background: url("../images/china.gif") no-repeat 1% center;
+  background-size: cover;
+}

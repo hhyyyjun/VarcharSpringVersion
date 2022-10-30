@@ -1,0 +1,141 @@
+html {
+  min-width: 417px;
+}
+
+.myInfoContainer {
+  flex: 0 0 100% !important;
+  max-width: 100% !important;
+}
+
+.myInfoContainer > form {
+  padding: 60px;
+}
+
+.myInfoTitle {
+  font-size: 24px;
+  font-weight: 550 !important;
+}
+
+.myInfo span {
+  color: #000;
+}
+
+.myInfoBox {
+  display: flex;
+}
+
+.myInfo {
+  width: 50%;
+}
+
+.firstColumn {
+  padding-right: 60px;
+  border-right: 1px solid lightgray;
+}
+
+/* deleteUserBtn : 회원탈퇴 버튼 */
+/* updateUserBtn : 회원정보 수정 버튼 */
+.deleteUserBtn {
+  margin-top: 30px;
+  transition: 0.2s ease-in-out;
+}
+
+.deleteUserBtn > input#deleteUserBtn {
+  background-color: #eb5a46 !important;
+  border: 1px solid #eb5a46 !important;
+}
+
+.secondColumn {
+  padding-left: 60px;
+}
+
+.updateUserBtn {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 30px;
+  transition: 0.2s ease-in-out;
+}
+
+.updateUserBtn > input:hover,
+.deleteUserBtn > input:hover {
+  opacity: 0.6;
+}
+
+.updateUserBtn > input,
+.deleteUserBtn > input {
+  width: 160px;
+  font-weight: bold;
+}
+
+/* 회원탈퇴 클릭 --> 그동안 작성한 글 삭제/유지/탈퇴취소 버튼 */
+
+#deleteMsgBox {
+  padding: 10px;
+  margin-bottom: 20px;
+  display: none;
+}
+
+#deleteMsgBox > p {
+  margin: 20px 0 10px;
+}
+#deleteMsgBtn {
+  display: flex;
+  justify-content: space-between;
+}
+
+#deleteMsgBtn > button {
+  width: 32%;
+  height: 45px;
+  color: #fff;
+  font-weight: bold;
+  border-radius: 3px;
+  outline: none !important;
+  transition: 0.2s ease-in-out;
+}
+#deleteMsgBtn > button:hover {
+  opacity: 0.6;
+}
+
+#deleteMsgBtn > button:first-child {
+  background-color: #eb5a46;
+  border: 1px solid #eb5a46;
+}
+
+#deleteMsgBtn > button:nth-child(2) {
+  background-color: #01d28e;
+  border: 1px solid #01d28e;
+}
+
+#deleteMsgBtn > button:last-child {
+  background-color: #1089ff;
+  border: 1px solid #1089ff;
+}
+
+#deleteOnlyMsgInfo {
+  font-size: 12px;
+  color: #01d28e;
+  display: none;
+}
+
+/* ------------------------------------------------------------- */
+
+@media (max-width: 990px) {
+  .myInfoBox {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .myInfo {
+    width: 100%;
+    padding: 0;
+  }
+
+  .firstColumn {
+    border-right: none;
+  }
+
+  .deleteUserBtn {
+    display: flex;
+    justify-content: flex-end;
+  }
+}

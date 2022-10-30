@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="SearchDAO">
+<resultMap type="Car" id="searchResult">
+	<id property="cnum" column="CNUM"/>
+	<result property="ctitle" column="CTITLE"/>
+	<result property="csubtitle" column="CSUBTITLE"/>
+	<result property="cyear" column="CYEAR"/>
+	<result property="cfuel" column="CFUEL"/>
+	<result property="ckm" column="CKM"/>
+	<result property="cprice" column="CPRICE"/>
+	<result property="ccity" column="CCITY"/>
+	<result property="cimg" column="CIMG"/>
+</resultMap>
+
+<select id="searchCar" resultMap="searchResult">
+SELECT * FROM ( SELECT * FROM CAR WHERE 1=1
+
+<if test="fuelList.size != 0">
+	AND CFUEL IN
+	<foreach item="cfuel" index="index" collection="fuelList"
+        open="(" separator="," close=")">
+          #{cfuel}
+    </foreach>
+</if>
+<if test="!cityList.isEmpty()">
+	AND CCITY IN
+	<foreach item="ccity" index="index" collection="cityList"
+        open="(" separator="," close=")">
+          #{ccity}
+    </foreach>
+</if>
+
+<if test="price_min >= 0">
+	AND CPRICE BETWEEN #{price_min} AND #{price_max}
+</if>
+<if test="km_min >= 0">
+	AND CKM BETWEEN #{km_min} AND #{km_max}
+</if>
+<if test="year_min >= 0">
+	AND CYEAR BETWEEN #{year_min} AND #{year_max}
+</if>
+)A
+<if test="checksort == '최신순'">
+	ORDER BY CNUM DESC
+</if>
+<if test="checksort == '제목순정렬'">
+	ORDER BY CTITLE ASC
+</if>
+<if test="checksort == '가격순정렬'">
+	ORDER BY CPRICE ASC
+</if>
+<if test="checksort == '주행거리순'">
+	ORDER BY CKM ASC
+</if>
+<if test="dataList != -1">
+LIMIT #{range1}, #{range2}
+</if>
+</select>
+</mapper>

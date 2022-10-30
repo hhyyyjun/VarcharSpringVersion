@@ -1,0 +1,226 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	min-width: 268px;
+}
+
+body {
+	-ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+	display : none
+}
+
+a {
+	text-decoration-line: none;
+	color: black;
+}
+
+button {
+	cursor: pointer;
+	outline: none;
+	border: none;
+	font-weight: bold;
+}
+
+button:hover {
+	background-color: #1089ff;
+	transition: all ease 0.5s;
+}
+
+
+#wrapperTop {
+	width: 100%;
+	height: 55px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: white;
+	border-bottom: 2px solid #f1f1f1;
+	padding: 15px 0;
+}
+
+#varchar {
+	height: 100%;
+	margin-left: 10px;
+	font-weight: bold;
+	color: black;
+	font-size: 18px;
+	margin-bottom: 7px;
+}
+
+#varchar>a:visited {
+	color: black;
+}
+
+#varchar>a>span {
+	color: #01d28e;
+}
+
+#TopCenter {
+	font-weight: bold;
+	margin-bottom: 7px;
+}
+
+@media ( max-width :340px) {
+	#TopCenter {
+		display: none;
+	}
+}
+
+#finish {
+	height: 100%;
+	margin-bottom: 7px;
+}
+
+#finish>button {
+	height: 30px;
+	border-top: none;
+	border-right: none;
+}
+
+#messagesWrap {
+	width: 100%;
+	height: 500px;
+	overflow: auto;
+}
+@media (max-height: 500px) {
+	#messagesWrap {
+		height: 350px;
+	}
+}
+@media (min-height: 700px) {
+	#messagesWrap {
+		height: 620px;
+	}
+}
+@media (min-height: 800px) {
+	#messagesWrap {
+		height: 720px;
+	}
+}
+@media (min-height: 900px) {
+	#messagesWrap {
+		height: 820px;
+	}
+}
+
+#messagesWrap::-webkit-scrollbar {
+  width: 12px;
+}
+#messagesWrap::-webkit-scrollbar-thumb {
+  background-color: #1089ff;
+  border-radius: 10px;
+}
+#messagesWrap::-webkit-scrollbar-track {
+  background-color: lightblue;
+  border-radius: 10px;
+  box-shadow: inset 0px 0px 5px white;
+}
+
+
+.youchat {
+	text-align: left;
+}
+
+.mychat {
+	text-align: right;
+}
+
+.mychat>.chatTextMsg {
+	padding: 10px;
+	color: #fff;
+	border-radius: 15px;
+	background-color: #01d28e;
+}
+
+.youchat>.chatTextMsg {
+	padding: 10px;
+	color: #000;
+	border-radius: 15px;
+	background-color: #f1f1f1;
+}
+
+.chatTextMsg {
+	text-align: left;
+    display: inline-block;
+    max-width: 250px;
+    word-break: break-all;
+}
+
+.chatText {
+	margin: 25px 5px;
+	min-height: 25px;
+	font-size: 15px;
+	font-weight: bold;
+	transition: all 0.12s;
+	padding: 0 13px;
+}
+
+.chatText:hover {
+	opacity: 0.8;
+}
+
+.whoSends {
+	margin: 25px 5px;
+    margin-bottom: -13px;
+    padding-left: 17px;
+    font-size: 14px;
+    font-weight: 550;
+}
+
+.whisperChat {
+	padding: 10px;
+	border-radius: 15px;
+	background-color: #000 !important;
+	font-weight: bold !important;
+	color: #fff !important;
+}
+
+#wrapperBottom {
+	width: 100%;
+	height: 60px;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 6px;
+	position: fixed;
+    bottom: 0;
+    margin-bottom: 0;
+    left: 0;
+    border-top: 1px solid #f1f1f1;
+    padding: 10px 0;
+    background-color: #fff;
+}
+#wrapperBottom > .buttons {
+	font-size: 18px;
+	font-weight: bold;
+}
+
+#sender {
+	width: 90%;
+	border-radius: 15px;
+	border: none;
+	padding: 0 13px;
+	margin-inline: 5px;
+	background-color: #f1f1f1;
+	font-weight: bold;
+	font-size: 18px;
+	outline: none;
+}
+
+.buttons {
+	width: 100px;
+}
+
+.buttonStyle {
+	border: 0.3px solid black;
+	background-color: #01d28e;
+	color: white;
+	border-radius: 15px;
+	border: none;
+	margin-right: 5px;
+}
