@@ -1,5 +1,5 @@
 // window.Kakao.init('본인 JAVASCRIPT API 키');
-        window.Kakao.init('b2cb5a1c49207d19e1c947876401ef30');
+        window.Kakao.init('본인 JavaScript API KEY');
       
      // 카카오톡 로그인
            function kakaoLogin() {
