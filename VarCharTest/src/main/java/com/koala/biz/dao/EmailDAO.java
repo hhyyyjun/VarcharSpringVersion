@@ -38,12 +38,12 @@ public class EmailDAO {
 		final String bodyEncoding = "UTF-8"; //콘텐츠 인코딩
 
 		String subject = "<VARCHAR> 아이디 찾기 안내";
-		String fromEmail = "dream82sy@naver.com";
+		String fromEmail = "보낼이메일";
 		String fromUsername = "<VARCHAR>"; 
 		String toEmail = mvo.getMemail(); // 콤마(,)로 여러개 나열
 
-		final String username = "rlatndus2005@gmail.com";//구글 계정    
-		final String password = "rhfsldkvxixqhacl";//발급받은 앱 비밀번호
+		final String username = "구글계정";//구글 계정    
+		final String password = "발급받은 앱 비밀번호";//발급받은 앱 비밀번호
 
 		// 메일에 출력할 텍스트
 		StringBuffer sb = new StringBuffer();
@@ -155,8 +155,8 @@ public class EmailDAO {
 		String fromUsername = "<VARCHAR>"; 
 		String toEmail = mvo.getMemail(); // 콤마(,)로 여러개 나열
 
-		final String username = "rlatndus2005@gmail.com";//구글 계정    
-		final String password = "rhfsldkvxixqhacl";//발급받은 앱 비밀번호
+		final String username = "구글계정";//구글 계정    
+		final String password = "발급받은 앱 비밀번호";//발급받은 앱 비밀번호
 		
 		// 메일에 출력할 텍스트
 		StringBuffer sb = new StringBuffer();
